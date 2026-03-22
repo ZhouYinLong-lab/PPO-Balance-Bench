@@ -1,0 +1,15 @@
+# 过滤掉 Python 运行时产生的二进制垃圾
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 过滤掉 Mac 系统自带的缩略图缓存 (它是 Git 的死对头)
+.DS_Store
+
+# 过滤掉虚拟环境文件夹 (我们只传代码，不传环境)
+ppo_env/
+venv/
+env/
+
+# 过滤掉 PyBullet 产生的临时日志
+*.p2p
