@@ -17,6 +17,8 @@ class SealBalanceEnv(gym.Env):
         if self.physicsClient is None:
             self.physicsClient = p.connect(p.GUI)
             p.setAdditionalSearchPath(pybullet_data.getDataPath())
+
+            p.configureDebugVisualizer(p.COV_ENABLE_GUI, 0)
         p.resetSimulation()
         p.setGravity(0, 0, -9.8)
         self.planeId = p.loadURDF("plane.urdf")

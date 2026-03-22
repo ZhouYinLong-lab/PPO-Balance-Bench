@@ -8,5 +8,8 @@ if __name__ == "__main__":
     for i in range(10000):
         action, _states = model.predict(obs, deterministic=True)
         obs, reward, terminated, truncated, info = env.step(action)
+
+        time.sleep(1./240.)
+        
         if terminated or truncated:
             obs, info = env.reset()
